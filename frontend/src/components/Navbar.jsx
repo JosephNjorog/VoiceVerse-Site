@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
-const Navbar = () => {
+const Navbar = ({ onJoinWaitlist }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -73,6 +73,7 @@ const Navbar = () => {
             
             {/* CTA Button */}
             <motion.button
+              onClick={onJoinWaitlist}
               className="bg-gradient-to-r from-voice-purple to-voice-cyan text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg hover:shadow-voice-purple/25 transition-all duration-300"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
@@ -120,6 +121,7 @@ const Navbar = () => {
               </motion.a>
             ))}
             <motion.button
+              onClick={onJoinWaitlist}
               className="w-full bg-gradient-to-r from-voice-purple to-voice-cyan text-white px-6 py-3 rounded-full font-semibold"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

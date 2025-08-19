@@ -72,7 +72,7 @@ const SoundWaves = () => {
   )
 }
 
-const Hero = () => {
+const Hero = ({ onJoinWaitlist }) => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background gradient */}

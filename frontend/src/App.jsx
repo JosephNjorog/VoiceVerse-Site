@@ -1,5 +1,4 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React, { useState } from 'react'
 import Hero from './sections/Hero'
 import About from './sections/About'
 import Universe from './sections/Universe'
@@ -9,13 +8,19 @@ import News from './sections/News'
 import Contact from './sections/Contact'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import WaitlistModal from './components/WaitlistModal'
 
 function App() {
+  const [isWaitlistOpen, setIsWaitlistOpen] = useState(false)
+
+  const openWaitlist = () => setIsWaitlistOpen(true)
+  const closeWaitlist = () => setIsWaitlistOpen(false)
+
   return (
     <div className="min-h-screen bg-voice-dark text-white">
-      <Navbar />
+      <Navbar onJoinWaitlist={openWaitlist} />
       <main>
-        <Hero />
+        <Hero onJoinWaitlist={openWaitlist} />
         <About />
         <Universe />
         <Features />
@@ -23,7 +28,10 @@ function App() {
         <News />
         <Contact />
       </main>
-      <Footer />
+      <Footer onJoinWaitlist={openWaitlist} />
+      
+      {/* Waitlist Modal */}
+      <WaitlistModal isOpen={isWaitlistOpen} onClose={closeWaitlist} />
     </div>
   )
 }
