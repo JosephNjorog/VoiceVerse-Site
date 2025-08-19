@@ -9,6 +9,7 @@ import Contact from './sections/Contact'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import WaitlistModal from './components/WaitlistModal'
+import FloatingCTA from './components/FloatingCTA'
 
 function App() {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false)
@@ -32,6 +33,9 @@ function App() {
       
       {/* Waitlist Modal */}
       <WaitlistModal isOpen={isWaitlistOpen} onClose={closeWaitlist} />
+      
+      {/* Floating CTA */}
+      <FloatingCTA onJoinWaitlist={openWaitlist} />
     </div>
   )
 }
