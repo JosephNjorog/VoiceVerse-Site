@@ -184,7 +184,7 @@ const WaitlistModal = ({ isOpen, onClose }) => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2 + index * 0.1 }}
                   >
-                    <span className="text-sm font-medium text-gray-300">{benefit}</span>
+                    <span className="text-sm font-medium text-black-300">{benefit}</span>
                   </motion.div>
                 ))}
               </div>
