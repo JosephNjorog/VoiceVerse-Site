@@ -1,7 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import NewsletterSignup from './NewsletterSignup'
 
-const Footer = () => {
+const Footer = ({ onJoinWaitlist }) => {
   const footerLinks = {
     product: [
       { name: 'Features', href: '#features' },
@@ -55,20 +56,7 @@ const Footer = () => {
             {/* Newsletter Signup */}
             <div className="space-y-3">
               <p className="text-sm font-semibold text-voice-cyan">Stay Updated</p>
-              <div className="flex space-x-2">
-                <input
-                  type="email"
-                  placeholder="Enter email"
-                  className="flex-1 px-3 py-2 bg-voice-gray/50 border border-voice-purple/30 rounded-lg text-white placeholder-gray-400 text-sm focus:outline-none focus:border-voice-cyan transition-colors duration-300"
-                />
-                <motion.button
-                  className="bg-gradient-to-r from-voice-purple to-voice-cyan text-white px-4 py-2 rounded-lg font-semibold text-sm hover:shadow-lg transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Subscribe
-                </motion.button>
-              </div>
+              <NewsletterSignup size="compact" />
             </div>
           </div>
 

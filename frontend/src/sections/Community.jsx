@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
+import NewsletterSignup from '../components/NewsletterSignup'
 
 const Community = () => {
   const ref = useRef(null)
@@ -233,19 +234,8 @@ const Community = () => {
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Get exclusive updates, early access opportunities, and behind-the-scenes content delivered to your inbox.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-voice-dark/50 border border-voice-purple/30 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-voice-cyan transition-colors duration-300"
-              />
-              <motion.button
-                className="bg-gradient-to-r from-voice-purple to-voice-pink text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-voice-purple/25 transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Subscribe
-              </motion.button>
+            <div className="max-w-md mx-auto">
+              <NewsletterSignup size="large" />
             </div>
           </motion.div>
         </motion.div>

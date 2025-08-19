@@ -145,19 +145,21 @@ const Hero = ({ onJoinWaitlist }) => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <motion.button
+              onClick={onJoinWaitlist}
               className="bg-gradient-to-r from-voice-purple to-voice-pink text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-voice-purple/25 transition-all duration-300"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              Explore the Universe
+              Join Waitlist
             </motion.button>
             
             <motion.button
+              onClick={() => document.getElementById('universe').scrollIntoView({ behavior: 'smooth' })}
               className="border-2 border-voice-cyan text-voice-cyan hover:bg-voice-cyan hover:text-voice-dark px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              Join Community
+              Explore Universe
             </motion.button>
           </motion.div>
 
