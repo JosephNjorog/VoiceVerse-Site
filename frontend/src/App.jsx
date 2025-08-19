@@ -10,6 +10,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import WaitlistModal from './components/WaitlistModal'
 import FloatingCTA from './components/FloatingCTA'
+import ScrollProgress from './components/ScrollProgress'
 
 function App() {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false)
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-voice-dark text-white">
+      <ScrollProgress />
       <Navbar onJoinWaitlist={openWaitlist} />
       <main>
         <Hero onJoinWaitlist={openWaitlist} />
