@@ -9,7 +9,7 @@ import {
   ChartBarIcon
 } from '@heroicons/react/24/outline'
 
-const Features = () => {
+const Features = ({ onJoinWaitlist }) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
 
@@ -174,6 +174,7 @@ const Features = () => {
               Be part of the revolution where your voice literally matters.
             </p>
             <motion.button
+              onClick={onJoinWaitlist}
               className="bg-gradient-to-r from-voice-purple to-voice-pink text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-voice-purple/25 transition-all duration-300"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}

@@ -23,8 +23,8 @@ function App() {
       <main>
         <Hero onJoinWaitlist={openWaitlist} />
         <About />
-        <Universe />
-        <Features />
+        <Universe onJoinWaitlist={openWaitlist} />
+        <Features onJoinWaitlist={openWaitlist} />
         <Community />
         <News />
         <Contact />

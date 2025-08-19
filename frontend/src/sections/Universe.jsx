@@ -61,7 +61,7 @@ const FactionTerritory = () => {
   )
 }
 
-const Universe = () => {
+const Universe = ({ onJoinWaitlist }) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
   const [activeTab, setActiveTab] = useState('world')
@@ -235,11 +235,12 @@ const Universe = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               <motion.button
+                onClick={onJoinWaitlist}
                 className="bg-gradient-to-r from-voice-cyan to-voice-purple text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-voice-cyan/25 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Enter the VoiceVerse
+                Join the Waitlist
               </motion.button>
             </motion.div>
           </motion.div>
